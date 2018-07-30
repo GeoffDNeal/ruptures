@@ -53,7 +53,10 @@ Code explanation
     :special-members: __init__
 
 """
-from functools import lru_cache
+try:
+    from functools import lru_cache
+except ImportError:
+    from functools32 import lru_cache
 
 from ruptures.utils import sanity_check
 from ruptures.costs import cost_factory

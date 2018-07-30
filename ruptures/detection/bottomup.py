@@ -94,7 +94,10 @@ Code explanation
     :keyprefix: bu-
 
 """
-from functools import lru_cache
+try:
+    from functools import lru_cache
+except ImportError:
+    from functools32 import lru_cache
 
 from ruptures.base import BaseCost, BaseEstimator
 from ruptures.costs import cost_factory

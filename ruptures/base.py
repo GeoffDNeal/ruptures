@@ -1,9 +1,12 @@
 """Base class for change point detection estimators."""
+from __future__ import division
+from six import with_metaclass
 import abc
+
 from ruptures.utils import pairwise
 
 
-class BaseEstimator(metaclass=abc.ABCMeta):
+class BaseEstimator(with_metaclass(abc.ABCMeta)):
 
     """Base class for all change point detection estimators.
 
@@ -30,7 +33,7 @@ class BaseEstimator(metaclass=abc.ABCMeta):
         pass
 
 
-class BaseCost(object, metaclass=abc.ABCMeta):
+class BaseCost(with_metaclass(abc.ABCMeta)):
 
     """Base class for all segment cost classes.
 

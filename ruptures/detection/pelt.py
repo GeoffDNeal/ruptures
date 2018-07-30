@@ -119,7 +119,7 @@ class Pelt(BaseEstimator):
         ind += [self.n_samples]
         for bkp in ind:
             # adding a point to the admissible set from the previous loop.
-            new_adm_pt = floor((bkp - self.min_size) / self.jump)
+            new_adm_pt = int(floor((bkp - self.min_size) / self.jump))
             new_adm_pt *= self.jump
             admissible.append(new_adm_pt)
 

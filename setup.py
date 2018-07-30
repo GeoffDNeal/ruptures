@@ -5,7 +5,6 @@ setup(
     version='1.0a1',
     packages=find_packages(exclude=['docs', 'tests*', 'images']),
     install_requires=['numpy', 'scipy', 'matplotlib'],
-    python_requires='>=3',
     # url='ctruong.perso.math.cnrs.fr/ruptures',
     license='BSD License',
     author='Charles Truong, Laurent Oudre, Nicolas Vayatis',
@@ -29,7 +28,5 @@ __ruptures__ is a Python library for offline change point detection. This packag
 
 
 An extensive documentation is available ctruong.perso.math.cnrs.fr/ruptures.
-
-This version requires Python 3 or later.
 """
 )
